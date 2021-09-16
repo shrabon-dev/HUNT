@@ -1,0 +1,33 @@
+font-family: 'Raleway', sans-serif;
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Sacramento', cursive;
+
+
+
+
+       <div class="about-title">
+            <h2>About Us</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Loremsum has been the industry's standard dummy text ever since the end of 1500s.</p>
+          </div>
+
+
+          #about-part .about-title{
+    text-align: center;
+    margin-top: -20px;
+}
+#about-part .about-title h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#about-part .about-title p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    padding: 0 275px;
+    margin-bottom: 25px;
+}

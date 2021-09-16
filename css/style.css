@@ -1,0 +1,1378 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+}
+
+/* =================================
+    preloader start
+==================================== */
+.preloader{
+    width: 100%;
+    height: 100vh;
+    background: #fec600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.preloader .pre-animation {
+    display: flex;
+
+}
+.preloader .pre-animation .pre-box{
+    width: 50px;
+    height: 50px;
+}
+.preloader .pre-animation .pre-dot1{
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    animation: one 3s infinite .1s;
+
+}
+
+@keyframes one {
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+    45%{
+        width: 5px;
+        height: 5px;
+        background: chocolate;
+    }
+    100%{
+        display: none;
+    }
+  
+}
+.preloader .pre-animation .pre-dot2{
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    animation: two 3s infinite .6s;
+
+}
+
+@keyframes two {
+    0%,100%{
+        width: 30px;
+        height: 30px;
+    }
+    45%{
+        width: 5px;
+        height: 5px;
+        background: rgb(158, 80, 25);
+    }
+  
+}
+.preloader .pre-animation .pre-dot3{
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    animation: three 3s infinite .9s;
+
+}
+
+@keyframes three {
+    0%,100%{
+        width: 30px;
+        height: 30px;
+    }
+    45%{
+        width: 5px;
+        height: 5px;
+        background: rgb(158, 80, 25);
+    }
+  
+}
+
+/* =================================
+    preloader end
+==================================== */
+
+
+.backtotop{
+    width: 40px;
+    height: 40px;
+    background: #fec600;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+
+/* =================================
+    navbar start
+==================================== */
+nav {
+    background: transparent;
+    border-bottom: 1px solid rgba(254, 198, 0, .8);
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: .4s;
+}
+.fixedmenu{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: #000;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #fff !important;
+    transition: .4s;
+    position: relative;
+}
+
+nav ul li a:after {
+    width: 100%;
+    height: 3px;
+    background: #fec600;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    content: "";
+    opacity: 0;
+    transition: .4s;
+}
+
+nav ul li:hover a {
+    color: #fec600 !important;
+}
+
+nav ul li:hover a:after {
+    opacity: 1;
+}
+
+/* =================================
+    nav end
+==================================== */
+
+/* =================================
+    banner start
+==================================== */
+
+#banner-part .banner {
+    background: url(../images/banner.png) no-repeat center;
+    background-size: cover;
+
+}
+#banner-part .banner2 {
+    background: url(../images/banner1.jpg) no-repeat center;
+    background-size: cover;
+
+}
+#banner-part .banner3 {
+    background: url(../images/banner2.jpg) no-repeat center;
+    background-size: cover;
+
+}
+#banner-part .prev{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    color: rgb(0, 0, 0);
+    background: #f1f1f1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    z-index: 1;
+    transition: .4s;
+}
+#banner-part .next{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    color: rgb(0, 0, 0);
+    background: #f1f1f1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    transition: .4s;
+}
+#banner-part .prev:hover,
+#banner-part .next:hover{
+    background: #fec600;
+}
+
+#banner-part .banner .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    text-align: center;
+    padding: 200px 0;
+    color: #fff;
+}
+
+#banner-part .banner .overlay h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#banner-part .banner .overlay h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fec600;
+}
+
+#banner-part .banner .overlay p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 543px;
+    margin: 20px auto;
+}
+
+#banner-part .banner .overlay a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #fec600;
+    border: 1px solid #fec600;
+    color: #000;
+    transition: .4s;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+#banner-part .banner .overlay .hire{
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+
+}
+
+#banner-part .banner .overlay a:hover {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+#banner-part .banner .overlay .hire:hover {
+    background: #fec600;
+    border-color: #fec600;
+    color: #000000;
+}
+
+/* =================================
+    banner end
+==================================== */
+
+/* =================================
+    curve bottom start
+==================================== */
+#curve-bottom {
+    height: 100px;
+    background: #fff;
+    transform: skew(-87deg);
+    transform-origin: left bottom;
+    position: relative;
+    top: -94px;
+    left: -137px;
+}
+
+/* =================================
+    curve bottom end
+==================================== */
+
+/* =================================
+    about start
+==================================== */
+
+
+
+
+#about-part .about-title{
+    text-align: center;
+    margin-top: -20px;
+}
+#about-part .about-title h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#about-part .about-title p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    padding: 0 275px;
+    margin-bottom: 25px;
+}
+
+#about-part .item {
+    background: #eeeeee;
+    margin: 30px 0;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .2));
+}
+#about-part h3{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #111111;
+    padding-bottom: 10px;
+}
+#about-part .smalld {
+    display: none;
+}
+
+
+
+#about-part .item .shape {
+    width: 20px;
+    height: 20px;
+    background: #eeeeee;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+
+#about-part .item .dot {
+    color: #000;
+    position: absolute;
+    bottom: -31px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 14px;
+    transition: .4s;
+}
+
+#about-part .item:hover .dot {
+    color: #fec600;
+}
+
+
+
+#about-part .item2 {
+    background: #eeeeee;
+    margin: 30px 0;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .2));
+}
+
+#about-part .item2 .shape {
+    width: 20px;
+    height: 20px;
+    background: #eeeeee;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#about-part .item2 .dot {
+    color: #000;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 14px;
+    transition: .4s;
+}
+
+#about-part .item2:hover .dot {
+    color: #fec600;
+}
+
+
+#about-part .alignment {
+    display: flex;
+    align-items: center;
+}
+
+#about-part .item3 {
+    background: #eeeeee;
+    margin: 20px 10px;
+    text-align: right;
+    padding: 40px;
+    position: relative;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .2));
+}
+
+#about-part .item3 .shape {
+    width: 20px;
+    height: 20px;
+    background: #eeeeee;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+#about-part .item3 .dot {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    right: -48px;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    transition: .4s;
+}
+
+#about-part .item3:hover .dot {
+    color: #fec600;
+}
+
+/* ================ */
+
+#about-part .alignment {
+    display: flex;
+    align-items: center;
+}
+
+#about-part .item4 {
+    background: #eeeeee;
+    margin: 20px 10px;
+    text-align: left;
+    padding: 40px;
+    position: relative;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .2));
+}
+
+#about-part .item4 .shape {
+    width: 20px;
+    height: 20px;
+    background: #eeeeee;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#about-part .item4 .dot {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    transition: .4s;
+}
+
+#about-part .item4:hover .dot {
+    color: #fec600;
+}
+
+#about-part .round {
+    width: 360px;
+    height: 360px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-part .round .img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    position: relative;
+}
+
+#about-part .round .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+.round-overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.722);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+/* =================================
+    about end
+==================================== */
+
+/* =================================
+    portfolio start
+==================================== */
+#portfolio-part {
+    background: url(../images/portfolio-bg.jpg) no-repeat center;
+    background-size: cover;
+    margin-top: 100px;
+    clip-path: polygon(0 10%, 100% 0, 100% 89%, 0% 100%);
+}
+
+#portfolio-part .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    padding: 150px 0;
+}
+#portfolio-part .port-title{
+    text-align: center;
+    margin-top: -20px;
+}
+#portfolio-part .port-title h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+#portfolio-part .port-title p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 275px;
+    margin-bottom: 25px;
+}
+#portfolio-part .overlay .item {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio-part .overlay .item:nth-child(even) {
+    flex-direction: column-reverse;
+
+}
+
+#portfolio-part .overlay .item .img {
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#portfolio-part .overlay .item .img img {
+    width: 100%;
+    transition: 5s;
+}
+
+#portfolio-part .overlay .item .img .img-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portfolio-part .overlay .item .img .img-overlay i {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+}
+
+#portfolio-part .overlay .item .img:hover img {
+    transform: scale(1.5) rotate(15deg);
+}
+
+#portfolio-part .overlay .item .img:hover .img-overlay {
+    transform: scale(1);
+}
+
+
+
+/* =================================
+    portfolio end
+==================================== */
+
+/* =================================
+    service start
+==================================== */
+#service-part {
+    margin-top: 100px;
+    position: relative;
+}
+
+#service-part .service-title{
+    text-align: center;
+    margin-top: -10px;
+}
+ #service-part .service-title h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 20px;
+}
+ #service-part .service-title p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    padding: 0 275px;
+    margin-bottom: 25px;
+}
+
+#service-part .line {
+    background: url(../images/border.png);
+    width: 1px;
+    height: 800px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#service-part .next{
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: .4s;
+
+}
+#service-part .prev{
+    font-size: 24px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: .4s;
+}
+#service-part .next:hover,
+#service-part .prev:hover{
+  border-color: transparent;
+  background: #fec600;
+}
+
+
+
+
+.service-slider{
+    margin-top: 20px;
+}
+#service-part .service {
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#service-part .service:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#service-part .service .details {
+    width: 40%;
+    background: #eee;
+    padding: 30px;
+}
+
+#service-part .service .img {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#service-part .service .img .round {
+    width: 70px;
+    height: 70px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+}
+
+#service-part .slick-center .img .round {
+    transform: scale(1.2);
+    background: #fec600;
+}
+
+#service-part .service .img .round img {
+    width: 50%;
+    height: 50%;
+}
+
+#service-part .service .title {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#service-part .service:nth-child(even) .title {
+    justify-content: flex-end;
+}
+
+/* =================================
+    service end
+==================================== */
+
+/* =================================
+    team part
+==================================== */
+
+#team-part {
+    background: url(../images/team-banner.jpg) no-repeat center;
+    background-size: cover;
+    margin-top: 100px;
+    clip-path: polygon(0 10%, 100% 0, 100% 89%, 0% 100%);
+
+}
+
+#team-part .depender {
+    position: relative;
+}
+
+#team-part .line {
+    background: url(../images/br.png);
+    width: 1px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#team-part .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    padding: 150px 0;
+}
+
+#team-part .overlay .img {
+    margin: 20px 0;
+}
+
+#team-part .img-slider{
+    padding-top: 30px;
+}
+
+
+#team-part .overlay .img .round {
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+    margin: 0 auto;
+}
+
+#team-part .overlay .img .round img {
+    margin-top: 12px;
+}
+
+#team-part .overlay .img .round .img-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s;
+}
+
+#team-part .overlay .slick-center .round {
+    transform: scale(1.2);
+    background: #fec600;
+}
+
+#team-part .overlay .slick-center .round .img-overlay {
+    opacity: 0;
+}
+
+#team-part .details-slider {
+    background: #eee;
+    padding: 30px;
+    position: relative;
+    margin-top: 100px;
+    width: 900px;
+}
+
+#team-part .details-slider::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #eee;
+    content: "";
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+#team-part .details-slider .details h3{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-top: 30px;
+    color: #111111;
+}
+#team-part .details-slider .details span{
+    font-size: 14px;
+    color: #fec600;
+    margin-top: -25px;
+}
+#team-part .details-slider .details h4{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    color: #353535;
+}
+#team-part .details-slider .details p{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; 
+}
+#team-part .details-slider .details .signature{
+    font-family: 'Sacramento', cursive;
+    font-size: 22px;
+    font-weight: 600;
+    color: #111111;   
+    text-align: right;
+    display: block;
+    margin-top: 0;
+
+}
+#team-part .next{
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: .4s;
+
+}
+#team-part .prev{
+    font-size: 24px;
+    color: #ffffff;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: .4s;
+
+}
+#team-part .next:hover,
+#team-part .prev:hover{
+  border-color: transparent;
+  background: #fec600;
+}
+
+
+
+/* =================================
+    team end
+==================================== */
+
+
+/* =================================
+    pricing start
+==================================== */
+#pricing-part {
+    margin-top: 100px;
+}
+#pricing-part .pricing-title{
+    text-align: center;
+    margin-top: -20px;
+}
+#pricing-part .pricing-title h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#pricing-part .pricing-title p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    padding: 0 275px;
+    margin-bottom: 25px;
+}
+
+
+
+#pricing-part .price {
+    background: #eee;
+}
+
+#pricing-part .price h2 {
+    font-family: 'Raleway', sans-serif;
+    background: #444444;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    transition: .4s;
+}
+
+#pricing-part .price .details {
+    position: relative;
+}
+
+#pricing-part .price .details .round {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #444;
+    background: #eee;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pricing-part .price .details .round .permonth {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .4s;
+}
+#pricing-part .price .details .round .permonth .mny{
+    margin-top: 5px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+#pricing-part .price .details ul {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#pricing-part .price .details ul li {
+    margin: 10px 0;
+}
+
+#pricing-part a {
+    display: block;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+    clip-path: polygon(0 34%, 100% 0, 100% 100%, 0% 100%);
+    padding-bottom: 20px;
+    transition: .4s;
+}
+
+#pricing-part .price:hover h2 {
+    background: #fec600;
+}
+
+#pricing-part .price:hover .details .round .permonth {
+    background: #fec600;
+    color: #444444;
+}
+
+#pricing-part .price:hover a {
+    background: #fec600;
+}
+
+/* =================================
+    pricing end
+==================================== */
+
+/* =================================
+    counter start
+==================================== */
+#counter-part {
+    background: url(../images/counter-bg.jpg) no-repeat center;
+    background-size: cover;
+    margin-top: 100px;
+    clip-path: polygon(0 34%, 100% 0, 100% 67%, 0% 100%);
+    background-attachment: fixed;
+}
+
+#counter-part .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    padding: 80px 0 80px 0;
+}
+
+#counter-part .align {
+    transform: rotate(-5deg);
+}
+
+#counter-part .item {
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+}
+#counter-part .item h2,
+#counter-part .item p{
+    font-size: 28px;
+    padding-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    transform: rotate(10deg);
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+#counter-part .item p{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+
+/* =================================
+    counter end
+==================================== */
+
+/* =================================
+    team start
+==================================== */
+#member-part {
+    margin-top: 100px;
+}
+
+#member-part .member-title{
+    text-align: center;
+    margin-top: -20px;
+}
+#member-part .member-title h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 20px;
+}
+#member-part .member-title p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #444444;
+    padding: 0 275px;
+    margin-bottom: 25px;
+}
+
+#member-part .member {
+    margin: 0 10px;
+    border: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+#member-part .member .img {
+    background: #eee;
+    text-align: center;
+    padding-top: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+    position: relative;
+
+}
+
+#member-part .member .img img {
+    margin: 0 auto;
+
+}
+
+#member-part .member .img .overlay {
+    width: 100%;
+    height: 0%;
+    background: rgba(254, 198, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .4s;
+
+}
+
+#member-part .member .img .overlay i {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+}
+
+#member-part .member:hover .img .overlay {
+    height: 100%;
+    opacity: 1;
+}
+
+#member-part .member .details {
+    text-align: center;
+}
+
+#member-part .member .details .icon {
+    margin-top: -20px;
+    opacity: 0;
+    transition: .4s;
+}
+
+#member-part .member .details .icon i {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #000;
+}
+
+#member-part .member:hover .details .icon {
+    margin-top: 20px;
+    opacity: 1;
+}
+
+/* =================================
+    team end
+==================================== */
+
+/* =================================
+    sponsor part
+==================================== */
+#sponsor-part {
+    margin-top: 100px;
+    background: #eee;
+    clip-path: polygon(0 34%, 100% 0, 100% 67%, 0% 100%);
+    padding: 100px 0;
+}
+
+#sponsor-part .align {
+    transform: rotate(-5deg);
+}
+
+#sponsor-part .item {
+    background: #f1f1f1;
+    padding: 30px 20px;
+    margin: 0 10px;
+    border: 1px solid #d1d1d1;
+}
+#sponsor-part .item img{
+    width: 100%;
+}
+#sponsor-part .slick-center{
+    border-color: #fec600;
+}
+
+/* =================================
+    sponsor end
+==================================== */
+
+/* =================================
+    footer start
+==================================== */
+footer {
+    background: #222222;
+    padding-top: 150px;
+    margin-top: -150px;
+}
+
+footer .logo {
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding: 20px;
+    transform: rotate(-5deg);
+}
+
+footer .logo img {
+    transform: rotate(5deg);
+}
+
+
+.footer-details{
+    text-align: center;
+    padding-top: 80px;
+}
+.footer-details  i{
+     width: 30px;
+     height: 30px;
+     background: #fec600;
+     border-radius: 50%;
+     font-size: 15px;
+     line-height: 30px;
+     margin-bottom: 5px;
+}
+.footer-details p{
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 8px;
+    margin-bottom: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+}
+.footer-details p span{
+    display: block;
+}
+.footer-details .phone-details{
+    border-left: 1px solid #444444;
+}
+.footer-details .email-details{
+    border-left: 1px solid #444444;
+    border-right: 1px solid #444444;
+}
+.follow{
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+.follow h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 50px;
+    padding-bottom: 10px;
+}
+.follow a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    margin: 0 5px;
+    transition: .4s;
+}
+.follow a:hover{
+    background: #fec600;
+}
+.footer-bottom{
+    text-align: center;
+    padding: 10px 0;
+    background: #353535;
+}
+.footer-bottom p{
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+.footer-bottom p span{
+    color: #fec600;
+}
+/* =================================
+    footer end
+==================================== */
